@@ -1,0 +1,123 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+div.Basic-Graphics-Frame {
+	border-color:#000000;
+	border-width:1px;
+	border-style:solid;
+}
+div.Basic-Text-Frame {
+	border-style:solid;
+}
+p.Basic-Paragraph {
+	color:#000000;
+	font-family:"Minion Pro", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.ParaOverride-1 {
+	-epub-hyphens:none;
+}
+span.CharOverride-1 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-2 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:14px;
+	font-style:italic;
+	font-weight:bold;
+}
+span.CharOverride-3 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-4 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:14px;
+	font-style:italic;
+	font-weight:300;
+}
+span.CharOverride-5 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:14px;
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-6 {
+	color:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:36px;
+	font-style:normal;
+	font-weight:bold;
+}
+#_idContainer000 {
+	display:inline-block;
+	height:4000px;
+	width:800px;
+}
+#_idContainer006, #_idContainer018, #_idContainer023 {
+	display:inline-block;
+	height:216px;
+	width:191px;
+}
+#_idContainer008, #_idContainer009, #_idContainer013, #_idContainer019, #_idContainer020, #_idContainer021, #_idContainer022 {
+	display:inline-block;
+	height:356px;
+	width:279px;
+}
+#_idContainer014, #_idContainer015, #_idContainer016, #_idContainer017 {
+	display:inline-block;
+	height:0px;
+	position:relative;
+	width:255px;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	background-color:#000000;
+	border-width:0px;
+}
+div._idGenObjectStyleOverride-2 {
+	border-width:0px;
+}
+div._idGenObjectStyleOverride-3 {
+	border-color:#ffffff;
+	border-style:double;
+	border-width:2px;
+}
+div._idGenObjectLayout-1 {
+	text-align:center;
+}

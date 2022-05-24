@@ -1,0 +1,527 @@
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"), url("fonts/Helvetica.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica-Bold"),
+    url("fonts/Helvetica-Bold.ttf") format("truetype");
+  font-display: block;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue"),
+    url("fonts/HelveticaNeue.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue"),
+    url("fonts/HelveticaNeue-Bold.ttf") format("truetype");
+  font-display: block;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue"),
+    url("fonts/HelveticaNeue-Light.ttf") format("truetype");
+  font-display: block;
+  font-weight: 100;
+}
+
+body {
+  font-family: "Helvetica", "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [sidebar] 25% auto;
+  grid-template-rows: 100vh;
+}
+
+.layout {
+  display: flex;
+}
+
+.default-sidebar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid #000;
+  font-family: "Helvetica Neue", monospace;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.logo {
+  padding: 16px;
+}
+
+.default-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18.5px;
+  flex-grow: 1;
+  padding-top: 100px;
+}
+
+.default-sidebar nav a {
+  line-height: 28.8px;
+}
+
+.sidebar-footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+.home {
+  white-space: pre-wrap;
+  font-size: 96px;
+  line-height: 115.2px;
+  font-weight: bold;
+
+  /* Simulate Marquee*/
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 8px 13.5px;
+}
+
+.home p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -moz-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-animation: home 300s linear infinite;
+  animation: home 300s linear infinite;
+}
+
+@keyframes home {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  100% {
+    transform: translateY(-30000px);
+  }
+}
+
+.shop_img {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(Public/Shop_web_resources/comingsoon2.gif);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.about_container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about_img_container {
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+  margin-right: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("Public/About_web_resources/TerminallyOnline_web.jpg");
+}
+
+.about_details {
+  width: 42%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid black;
+}
+
+.about_details h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0.75rem 0;
+}
+
+.about_details p {
+  font-size: 1.4rem;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  font-size: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.contact_form h1 {
+  font-size: 2.5rem;
+  margin: 1.25rem 0;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  width: 100%;
+  align-items: center;
+}
+
+.field>div {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.field_message {
+  display: flex;
+  flex-direction: column;
+}
+
+.field_message>div {
+  margin: 0.75rem 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.5rem 0.25rem;
+  width: 18rem;
+}
+
+.send_btn {
+  outline: none;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 0.75rem 4rem;
+  align-self: center;
+  margin: 1.25rem 0 1rem 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+textarea:focus,
+input:focus {
+  outline-color: black;
+}
+
+.interviews {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.interview_container {
+  padding: 1rem;
+}
+
+.interview_container h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.interview {
+  height: 18rem;
+  width: 12rem;
+  border: 1px solid black;
+  margin: 1rem;
+  transition: all 0.25s;
+}
+
+.interview div:hover {
+  text-decoration: none !important;
+}
+
+.interview:hover {
+  transform: scale(1.05);
+}
+
+.interview img {
+  width: 100%;
+  height: 80%;
+}
+
+.interview div {
+  padding-right: 0.5rem;
+  text-align: right;
+}
+
+.hello {
+  width: 10rem;
+  height: 20rem;
+  color: black;
+  background-color: red;
+}
+
+.portfolio_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 2rem 6rem;
+  flex: 1;
+  color: rgb(254, 248, 248);
+  text-align: justify;
+  overflow-x: hidden;
+}
+
+.portfolio p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.wealth_simple img {
+  width: 20%;
+  height: auto;
+}
+
+.wealth_simple {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.end_line {
+  width: 40%;
+  height: 0.1rem;
+  align-self: center;
+  margin: 2rem 0 4rem 0;
+  background-color: white;
+  color: transparent;
+}
+
+.portfolio_work {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio_work p {
+  margin: 0;
+}
+
+.portfolio_work>div {
+  width: 60%;
+}
+
+.portfolio_work img {
+  width: 35%;
+  height: 30rem;
+}
+
+.portfolio_work_img {
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+}
+
+.portfolio_work2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio_work2_details {
+  width: 60%;
+}
+
+.portfolio_work_img img {
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+
+.miscellaneous {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.miscellaneous h1 {
+  font-size: 2.5rem;
+}
+
+.miscellaneous_container {
+  width: 50%;
+  margin: 2rem 0;
+}
+
+.miscellaneous_container img {
+  width: 100%;
+  height: 40rem;
+}
+
+.miscellaneous_details {
+  margin: 2rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.miscellaneous_details p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.interviewDetails_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.interviewDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 4rem;
+}
+
+.interviewDetails p {
+  margin: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.interviewDetails h1,
+.interviewDetails h2,
+.interviewDetails h5 {
+  margin: 0.5rem;
+}
+
+.interviewDetails h1 {
+  font-size: 5rem;
+}
+
+.interview_img {
+  height: auto;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.interviewDetails h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.center_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interviewDetails h5 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.ques_ans {
+  margin: 0.5rem 0;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.ques_ans>p {
+  margin-bottom: 1rem;
+}
+
+.ImgComponent,
+.ImgComponent2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ImgComponent img,
+.ImgComponent2 img {
+  width: 30%;
+  height: 25rem;
+  margin: 2rem 3rem;
+
+}

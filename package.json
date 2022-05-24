@@ -4,8 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://anhminhtran235.github.io/test",
   "dependencies": {
     "alertifyjs": "^1.13.1",
     "emailjs-com": "^3.2.0",
